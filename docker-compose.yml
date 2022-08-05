@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  proxy:
+    image: gar-repo-test-proxy
+    networks:
+      - no-internet
+    command: yum makecache
+
+  internal-and-external:
+    image: ubuntu/squid:5.2-22.04_beta
+    networks:
+      - no-internet
+      - internet
+
+networks:
+  no-internet:
+    driver: bridge
+    internal: true
+  internet:
+    driver: bridge

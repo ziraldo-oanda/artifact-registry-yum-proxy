@@ -1,0 +1,10 @@
+[gar-yum-repo]
+baseurl = https://us-central1-yum.pkg.dev/projects/<your_project>/<your_repo>
+gpgcheck = 0
+http_caching = packages
+keepalive = 1
+keepcache = 0
+metadata_expire = 60
+metadata_expire_filter = read-only:future
+name = GAR yum-repo
+repo_gpgcheck = 0
